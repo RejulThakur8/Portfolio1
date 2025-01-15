@@ -11,6 +11,12 @@ class Contactus(models.Model):
     def __str__(self):
         return self.Name
     
+class Filefield(models.Model):
+    file = models.FileField(upload_to="static/file")
+    title = models.CharField(max_length=255,default="title")
+
+    def __str__(self):
+        return self.title
 
 class Eduction(models.Model):
     title = models.CharField(max_length=150,default="title1")

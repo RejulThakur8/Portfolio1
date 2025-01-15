@@ -17,7 +17,7 @@
 <body class="Alice-theme">
     <nav class="navbar navbar-expand-lg tight-navbar fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand ms-2 fw-bold" id="logo" href="">REJUL THAKUR</a>
+            <a class="navbar-brand ms-2 fw-bold" id="logo" href="/home/">REJUL THAKUR</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,17 +44,19 @@
         {% endfor %}
         {% endif %}
         <div class="row">
+            {% for i in resume %}
             <div class="rejul-intro col-12 col-lg-6 mt-5">
                 <h1>Hey, I'm <span class="fname">Rejul Thakur</span></h1>
                 <p class="p-3">As an aspiring Full Stack Python/Django Developer, I am passionate about building scalable and
                     efficient web applications. With hands-on experience in Python, Django, and modern web technologies, I am
                     ready to bring innovative solutions to the development world.</p>
                 <div class="hero-buttons">
-                    <a href="C:/Users/HP/Downloads/Untitled.pdf" download="Rejul_Resume.pdf" id="btn"
+                    <a href="{{i.file.url}}" download="Rejul_Resume.pdf" id="btn"
                         class="btn btn-primary">Download Resume</a>
                     <a href="/contact/" class="btn btn-secondary">Contact Me</a>
                 </div>
             </div>
+            {% endfor %}
             {% for i in profile %}
             <div class="col-12 col-md-6 col-lg-6 mt-1 profile">
                 <img src="{{i.image1.url}}" class="img-thumbnail image">
