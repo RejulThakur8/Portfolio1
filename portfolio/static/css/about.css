@@ -1,0 +1,37 @@
+.about-me{
+    position: relative;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    padding-top: 60px;
+}
+
+.about{
+    color: #000080;
+}
+.about h1{
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.card-body1{
+    margin-left: 80px;
+    margin-right: 80px;
+    font-size: x-large;
+}
+
+
+@media(max-width: 768px){
+    .card-body1{
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: medium;
+    }
+}
+

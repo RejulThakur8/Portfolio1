@@ -1,9 +1,32 @@
 {% extends "base.html" %}
 {% block title %} About Me | Rejul Thakur | Full Stack Developer{% endblock title %}
-
 {% load static %}
-
-
 {% block start %}
+
+
+
+<div class="container-fluid">
+    <section class="row about-me">
+        <h1 class="text-center about">About</h1>
+    </section>
+    <div class="row">
+        {% for i in profile %}
+        <div class="d-flex justify-content-center align-item-center col-12 col-md-6 col-lg-4 mt-1">
+            <img src="{{i.image1.url}}" class="img-thumbnail image">
+        </div>
+        {% endfor %}
+        <div class="text-center col-12 col-md-6 col-lg-8 mt-5">
+            <div class="card-body card-body1 text-primary">
+                <p class="card-text">Hi, I’m Rejul Thakur, a passionate and self-motivated aspiring Full-Stack Developer with a strong foundation in web development. I hold a B.Sc. in Chemistry and have successfully transitioned into the IT field by completing a comprehensive Full-Stack Python/Django Developer course.</p>
+                <p class="card-text">During my journey, I’ve gained hands-on experience in building web applications, including an <strong>Lenskart</strong>, <strong>Trendnest</strong> project. This project honed my skills in <b>Django</b>, <b>Python</b>, and front-end technologies such as <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, and <b>Bootstrap</b>.</p>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <a href="/home/" class="btn btn-secondary fs-5 mt-5">Back</a>
+    </div>
+</div>
+
+
 
 {% endblock start %}
